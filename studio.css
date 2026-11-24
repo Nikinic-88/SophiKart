@@ -1,0 +1,30 @@
+*{box-sizing:border-box}
+:root{color-scheme:dark;font-family:"Segoe UI",system-ui,sans-serif;background:#10171d;color:#eff4f7}
+body{margin:0}.shell{width:min(1440px,100%);margin:auto;padding:0 clamp(14px,4vw,60px) 22px}
+header,.controls,.footer,.dashboard,.actions,.choices,.lane-info{display:flex;align-items:center}
+header{height:70px;justify-content:space-between;border-bottom:1px solid #33424d}
+.brand{font-size:1.4rem;font-weight:900;letter-spacing:-.06em;font-style:italic}.brand i{color:#b9ec77}.studio-name,.footer{color:#adc0ca;font-size:.9rem}
+.controls{justify-content:space-between;margin:18px 0;gap:10px;flex-wrap:wrap}
+.choices{gap:3px;background:#1a242d;border:1px solid #35434f;padding:3px;border-radius:10px}
+button{font:inherit;font-size:.93rem;line-height:1.25;color:#eaf0f4;background:#263542;border:1px solid #52616b;border-radius:7px;padding:10px 14px;cursor:pointer}
+.choices button{background:transparent;border:0;color:#c4d0d7}.choices button[aria-pressed=true]{background:#e3ecf0;color:#14232d;font-weight:650}
+button:hover{filter:brightness(1.15)}button:focus-visible{outline:3px solid #a1d9ff;outline-offset:3px}
+.stage{position:relative;isolation:isolate;height:clamp(455px,70vh,750px);overflow:hidden;background:#14222d;border:1px solid #465664;border-radius:16px}
+.scene,.scene canvas,#corner canvas{position:absolute;inset:0;width:100%;height:100%}
+.stage[data-view=drive] .scene:after,.stage:not([data-view]) .scene:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0c182687,transparent 40%,transparent 68%,#0a162676);pointer-events:none}
+.heading,.dashboard{position:absolute;z-index:2;left:clamp(15px,2.7vw,38px);right:clamp(15px,2.7vw,38px)}
+.heading{top:clamp(16px,2.5vw,36px);pointer-events:none}.heading h1{margin:0;font-size:clamp(2.1rem,4.8vw,5.1rem);font-weight:700;letter-spacing:-.06em;line-height:1.02}
+.heading p{margin:7px 0 0;font-size:clamp(.89rem,1.3vw,1.1rem);color:#e2edf4}.dashboard{bottom:14px;justify-content:space-between;background:#12202bf2;border:1px solid #59707e;border-radius:10px;padding:9px 12px;gap:8px}
+.actions{gap:6px}.primary{background:#c6ef92;border-color:#c6ef92;color:#172618;font-weight:700;min-width:98px}
+.readout span,.lane-info strong{font-size:.85rem;color:#c5d5df}.readout strong{display:block;font-size:clamp(1.25rem,1.8vw,1.65rem);line-height:1.15;font-variant-numeric:tabular-nums}.readout small{font-size:.9rem}.footer{justify-content:space-between;gap:12px;margin-top:12px}.footer span:last-child{text-align:right}
+#comparison,#corner{position:absolute;inset:clamp(105px,10vw,152px) clamp(12px,2.7vw,38px) 92px}
+#comparison{display:grid;grid-template-rows:1fr 1fr;gap:10px}.lane{position:relative;overflow:hidden;border:1px solid #445865;border-radius:8px;background:#22323b}
+.lane-info{position:absolute;top:8px;left:13px;right:13px;z-index:1;justify-content:space-between;gap:6px}.lane-info strong,.lane-info span{font-size:clamp(.85rem,1.3vw,1.03rem);font-variant-numeric:tabular-nums;color:#fff}.lane canvas{width:100%;height:100%;display:block}
+#corner{border:1px solid #435258;border-radius:8px;overflow:hidden;background:#1a2931}
+[hidden]{display:none!important}
+#pedal{touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+#pedal[aria-pressed=true]{background:#fbc190;color:#311b0b;border-color:#fbc190;box-shadow:inset 0 2px 4px #40210035}
+@media(max-width:620px){header{height:50px}.controls{margin:10px 0}.choices button{padding:8px;font-size:.875rem}.stage{height:clamp(450px,70svh,610px)}.dashboard{padding:8px;left:9px;right:9px}.actions>button{min-width:0;padding:9px}.heading h1{font-size:2.1rem}.footer{align-items:flex-start;font-size:.8rem}.lane-info{left:9px;right:9px}.studio-name{font-size:.85rem}}
+@media(max-width:380px){.shell{padding:0 8px 12px}.controls{gap:4px}.choices button{padding:7px}.actions button{font-size:.82rem}.readout span{font-size:.75rem}}
+@media(max-width:620px){.actions{flex-shrink:0}.actions button{white-space:nowrap}.readout span{display:block;line-height:1.15}#comparison,#corner{bottom:98px}}
+.course-link{align-self:center;padding:8px;color:#c6ef92;font-weight:650;text-decoration:none}.course-link:hover{text-decoration:underline}.course-link:focus-visible{outline:2px solid white}
