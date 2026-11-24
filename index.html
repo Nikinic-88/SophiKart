@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SophiKart</title>
+<link rel="icon" href="data:,"><link rel="stylesheet" href="studio.css">
+<script defer src="drive.js"></script><script defer src="parts/geometry.js"></script><script defer src="experiments.js"></script>
+</head><body><main class="shell">
+<header><span class="brand">Sophi<i>Kart</i></span><span class="studio-name">Kart driving studio</span></header>
+<div class="controls"><div class="choices" role="group" aria-label="Terrain"><button data-terrain="road" aria-pressed="true">Road</button><button data-terrain="trail" aria-pressed="false">Off-road</button><a class="course-link" href="slalom.html">Slalom</a></div>
+<div class="choices weather" role="group" aria-label="Preview weather"><button data-mode="clear" aria-pressed="true">Clear</button><button data-mode="rain" aria-pressed="false">Rain</button><button data-mode="night" aria-pressed="false">Night rain</button></div></div>
+<section class="stage" aria-labelledby="title">
+<div class="scene" id="scene" data-mode="clear"><canvas id="effects" aria-hidden="true"></canvas></div>
+<div class="heading"><h1 id="title">SophiKart</h1><p id="subtitle">Dry and wet braking from the same starting line.</p></div>
+<div id="comparison" hidden>
+<div class="lane dry"><div class="lane-info"><strong>Dry pavement</strong><span id="dry-value"></span></div><canvas aria-hidden="true"></canvas></div>
+<div class="lane wet"><div class="lane-info"><strong>Wet pavement</strong><span id="wet-value"></span></div><canvas aria-hidden="true"></canvas></div>
+</div>
+<div id="corner" hidden><canvas aria-label="Side view of the rear wheel, swingarm and damper crossing a bump"></canvas></div>
+<div class="dashboard"><div class="readout"><span id="metric-label">Drive speed</span><strong id="metric">72 km/h</strong></div><div class="actions"><button id="exit" hidden>Back to drive</button><button id="action">Compare stops</button><button class="primary" id="pedal" aria-pressed="false">Hold brake</button></div></div>
+</section>
+<div class="footer"><span id="status" role="status">Road · Clear</span><span id="model-note">Illustrative braking model</span></div>
+</main></body></html>
